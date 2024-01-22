@@ -3,16 +3,30 @@
 @tailwind utilities;
 
 body {
-  background-color: #000;
+    background-color: #000;
 }
 
 .red-gradient {
-  background: linear-gradient(92deg, #ff5956 2.87%, #ee1e38 96.18%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    background: linear-gradient(92deg, #ff5956 2.87%, #ee1e38 96.18%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 :root {
-  color-scheme: dark;
+    color-scheme: dark;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.5s ease-in-out;
+    animation-fill-mode: both; /* Ensures the final state of the animation is applied */
 }
